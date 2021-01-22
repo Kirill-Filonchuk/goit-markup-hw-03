@@ -1,0 +1,292 @@
+/* 
+основной цвет фона  #FFFFFF (no- #E5E5E5)
+вторичный цвет фона #F5F4FA
+акцент              #2196F3
+фон кнопки-фильтра  #F5F4FA
+цвет фона карточки наша команда #FFFFFF
+цвет фона карточки портфолио,   #EEEEEE      
+цвет фона навигации             #FFFFFF
+цвет фона футтера               #2F303A
+цвет фона (временная подмена) Герой #2F303A
++++++++++++++++++++++++++++++++++++++++++++++
+основной цвет текста <p>             #757575
+         button, навигация, h3, h2-  #212121
+         футтер                      #FFFFFF         
++++++++++++++++++++++++++++++++++++++++++++++
+р3
+LOGO
+WEB-    #2196F3 
+Font Raleway 700
+Studio (хедер)-     #000000
+Studio (футтер)-    #FFFFFF
+++++++++++++++++++++++++++++++++++++++++++++
+
+font-family: Raleway    700;
+
+font-family: Roboto     900, 700, 500, 400;
+*/
+:root {
+  --primary-text-color: #757575;
+  --second-text-color: #212121;
+  --footer-text-color: #ffffff;
+  --accent-color: #2196f3;
+  --footer-rare-text-color: rgba(255, 255, 255, 0.6);
+  --primary-bg-color: #ffffff;
+  --second-bg-color: #f5f4fa;
+  --cards-portfolio-color: #eeeeee;
+  --navigation-bg-color: #ffffff;
+  --header-logo-studio-color: #000000;
+  --footer-logo-studio-color: #ffffff;
+  --header-logo-web-color: #2196f3;
+  --footer-bg-color: #2f303a;
+}
+
+.global {
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.list {
+  list-style: none;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+/* ========= Header ========= */
+
+/* ========= Logo ========= */
+
+.logo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.192;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+}
+
+.logo-web-color-header {
+  color: var(--header-logo-web-color);
+}
+
+.logo-studio-color-header {
+  color: var(--header-logo-studio-color);
+}
+
+/* ========= Navigation ========= */
+
+.site-nav .link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.143;
+  color: var(--second-text-color);
+  text-decoration: none;
+}
+
+.site-nav .link.current {
+  color: var(--accent-color);
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--accent-color);
+}
+
+.header-contact-tel,
+.header-contact-mail {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.143;
+  color: var(--primary-text-color);
+  text-decoration: none;
+}
+
+.header-contact-tel:hover,
+.header-contact-tel:focus,
+.header-contact-mail:hover,
+.header-contact-mail:focus {
+  color: var(--accent-color);
+}
+
+/* ========= Hero ========= */
+
+/* Временное задание фона */
+.hero {
+  background-color: var(--footer-bg-color);
+}
+
+.hero-title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.364;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--footer-text-color);
+}
+
+.hero-button {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.875;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--footer-text-color);
+  background-color: var(--accent-color);
+}
+
+/* ======= Particularities ======= */
+
+.particular-list .title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--second-text-color);
+}
+
+.particular-list .text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+}
+
+/* ======= Practice ======= */
+
+.practice-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.167;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--second-text-color);
+}
+
+/* ======= Our team ======= */
+.team {
+  background-color: var(--second-bg-color);
+}
+
+.team-list .team-card {
+  background-color: var(--primary-bg-color);
+}
+
+.team-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.167;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--second-text-color);
+}
+
+.team-list-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.188;
+  letter-spacing: 0.03em;
+  color: var(--second-text-color);
+}
+
+.team-list-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.188;
+  letter-spacing: 0.03em;
+}
+
+/* ======= Footer ======= */
+
+.footer {
+  background-color: var(--footer-bg-color);
+  font-style: normal;
+}
+
+.logo-web-color-footer {
+  color: var(--header-logo-web-color);
+}
+
+.logo-studio-color-footer {
+  color: var(--footer-logo-studio-color);
+}
+
+.address-futer {
+  text-decoration: none;
+  font-style: normal;
+}
+
+.address-office {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+  color: var(--footer-text-color);
+  text-decoration: inherit;
+}
+
+.address-mail,
+.adress-tel {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+  text-decoration: inherit;
+  color: var(--footer-rare-text-color);
+}
+
+/* ======= CSS rules for Portfolio.html ======= */
+
+/* ======= Filtres buttom ======= */
+
+.filter-button {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.625;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--second-text-color);
+  background-color: var(--navigation-bg-color);
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  color: var(--footer-text-color);
+  background-color: var(--accent-color);
+}
+
+/* ======= Portfolio ======= */
+.portfolio-link {
+  text-decoration: inherit;
+}
+
+.portfolio-list-item .title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--second-text-color);
+}
+
+.portfolio-list-item .text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+}
