@@ -53,7 +53,7 @@ html {
 *,
 *::before,
 *::after {
-  box-sizing: inherit; /*border-box а глобально на html св-во присвоить БОРДЕр-БОкс, тогда сдесь отсавить инхерит*/
+  box-sizing: inherit;
 }
 
 h1,
@@ -90,9 +90,6 @@ button {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-
-  /* +++++++++++++++ temporary style +++++++++++++++ */
-  outline: 1px dotted red;
 }
 
 .global {
@@ -118,13 +115,11 @@ button {
 }
 
 /* ========= Header ========= */
-/* add bottom-line */
 
 .header {
   border-bottom: 1px solid var(--bottom-line-menu);
 }
 
-/* turn components into flex elements */
 .header .container {
   display: flex;
   align-items: center;
@@ -159,25 +154,14 @@ button {
 .site-nav {
   display: flex;
   align-items: center;
-
-  /* +++++++++++++++ temporary style +++++++++++++++ */
-  outline: 1px dotted red;
 }
 
 .site-nav-item:not(:last-child) {
   margin-right: 50px;
 }
 
-.site-nav li {
-  /* +++++++++++++++ temporary style +++++++++++++++ */
-
-  /* +++++++++++++++ temporary style +++++++++++++++ */
-  outline: 1px dotted red;
-}
-
 .site-nav .link {
-  display: inline-block; /* было block */
-
+  display: inline-block;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -200,9 +184,6 @@ button {
 .header-contact {
   display: flex;
   margin-left: auto;
-
-  /* +++++++++++++++ temporary style +++++++++++++++ */
-  outline: 1px dotted red;
 }
 
 .header-contact .items + .items {
@@ -226,11 +207,7 @@ button {
 }
 
 /* ========= Hero</br> ========= */
-/* способ 2 Выравнивание кнопки по центру Героя 
-  .display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; */
+
 /* Временное задание фона */
 .hero {
   background-color: var(--footer-bg-color);
@@ -257,12 +234,6 @@ button {
 }
 
 /* Decoration Button */
-
-/* Hover   background: #188CE8; !!!!!!!!
-No-Hover  background: #2196F3; !!!!!!!!
-136*30 Text Ground
-Button padding 10-32 3.12
-*/
 
 .hero-button {
   padding: 10px 32px;
@@ -329,9 +300,7 @@ Button padding 10-32 3.12
   padding-bottom: 10px;
 }
 
-/* ======= Practice ======= 
-What we are doing, and what we can.
-*/
+/* ======= Practice ======= */
 .practice .container {
   padding-bottom: 94px;
 }
@@ -390,6 +359,7 @@ What we are doing, and what we can.
   display: flex;
   flex-wrap: wrap;
 
+  /* После ВЕБИНАРА РЕПЕТЫ */
   margin-left: calc(-1 * var(--card-set-gap));
   margin-top: calc(-1 * var(--card-set-gap));
 }
@@ -426,29 +396,6 @@ What we are doing, and what we can.
   padding-top: 30px;
 }
 
-/* каждому добавляет margin-right: 30px */
-/* 
-==========БЫЛО ДО ДОП Вебинара
-.team-card:nth-child(n) {
-  margin-right: 30px;
-  /* margin-bottom: 30px; 
-} */
-/* каждому 4-му убирает добавленные выше margin-right: 30px. Такой алгоритм не нарушает дизайн фона, а на секции здесь он есть. */
-/* 
-========БЫЛО ДО ДОП Вебинара
-.team-card:nth-child(4n) {
-  margin-right: 0;
-} */
-
-/* последним 4м убирает добавленные выше margin-bottom: 30px; что не нарушает заданные дизайном нижний отступ карточек от границы секции.*/
-
-/* ===========БЫЛО ДО ДОП Вебинара
-.team-card:nth-last-child(-n + 4) {
-  margin-bottom: 0;
-} */
-
-/* После до ВЕБИНАРА РЕПЕТЫ */
-
 .team-list-title {
   font-weight: 500;
   font-size: 16px;
@@ -470,8 +417,8 @@ What we are doing, and what we can.
 /* ======= Footer .container  ======= */
 
 .footer .container {
-  padding-top: 56px; /* 21*3-24*3=3*3=9. 60+60-(56+55)=9. 9=5+4 раскидал на верхний и нижний паддинг. Из-за ошибки дизайнера Костыль 2 - уменьшить паддинги с 60*/
-  padding-bottom: 55px; /*  Из-за ошибки дизайнера Костыль 2 - уменьшить паддинги с 60*/
+  padding-top: 56px; /* 21*3-24*3=3*3=9. 60+60-(56+55)=9. 9=5+4 раскидал на верхний и нижний паддинг. Из-за ошибки дизайнера Костыль 1 - уменьшить паддинги с 60*/
+  padding-bottom: 55px; /*  Из-за ошибки дизайнера Костыль 1 - уменьшить паддинги с 60*/
 }
 
 .footer-logo {
@@ -491,12 +438,10 @@ What we are doing, and what we can.
   color: var(--footer-logo-studio-color);
 }
 
-/* kill defolt property */
-
 .address-list {
   display: flex;
   flex-direction: column;
-  /* height: 81px; Вариант1. Костыль для исправления ошибки дизайнера макета*/
+  /* height: 81px; Костыль 2 для исправления ошибки дизайнера макета*/
 }
 
 .address-list .items:not(:last-child) {
@@ -529,17 +474,12 @@ What we are doing, and what we can.
 
 /* ======= CSS rules for Portfolio.html ======= */
 
-/* +++++++++++++++ temporary style +++++++++++++++ */
-.filter {
-  outline: 1px solid green;
-}
-
 .portfolio-main .container {
   padding-top: 94px;
   padding-bottom: 94px;
 }
 
-/* ======= Filtres button ======= .container*/
+/* ======= Filtres button ======= */
 
 .filter-button-container {
   padding-bottom: 50px;
@@ -567,11 +507,12 @@ What we are doing, and what we can.
   font-weight: 500;
   font-size: 16px;
   line-height: 1.625;
-  text-align: center; /* проверить на переполнении если что дисп флекс и  и как у кнп в херо*/
+  text-align: center;
   letter-spacing: 0.03em;
   color: var(--second-text-color);
   background-color: var(--navigation-bg-color);
 
+  border: none;
   border-radius: 4px;
 }
 
@@ -587,52 +528,27 @@ What we are doing, and what we can.
 
 /* ======= Portfolio ======= */
 
-/* +++++++++++++++ temporary style +++++++++++++++ */
-.portfolio {
-  outline: 1px dotted red;
-}
-
-/* прием для борьбы с выпадением верхнего "-" марджина в секцию с фильтр-кнопками */
-.portfolio-cards {
-  border-top: 0.1px solid transparent;
-  border-bottom: 0.1px solid transparent;
-}
-
 .portfolio-link {
   text-decoration: inherit;
 
-  /* доп. вебинар 1 Репета 1:21  */
   display: block;
 }
 
 .portfolio-list {
-  display: flex; /* До ВЕБИНАРА И ПОСЛЕ ТО ЖЕ*/
-  flex-wrap: wrap; /* До ВЕБИНАРА И ПОСЛЕ ТО ЖЕ*/
+  display: flex;
+  flex-wrap: wrap;
 
   margin-top: calc(-1 * var(--card-set-gap)); /* НОВОЕ*/
   margin-left: calc(-1 * var(--card-set-gap)); /* НОВОЕ*/
-  /* может быть добавить только левый м правый, а в карточках счетчиком снять верхний у верхнего ряда и нижний у нижнего */
-  /* Стили после Доп-вебинар РЕПЕТЫ */
-  /* До ВЕБИНАРА */
-  /* margin: -15px; БЫЛО До ВЕБИНАРА*/
 }
-
-/* portfolio list develop desing  */
-
-/* До ВЕБИНАРА */
 
 .portfolio-list-item {
   flex-basis: calc(100% / 3 - var(--card-set-gap)); /* НОВОЕ*/
 
   margin-left: var(--card-set-gap); /* НОВОЕ*/
   margin-top: var(--card-set-gap); /* НОВОЕ*/
-
-  /* До ВЕБИНАРА */
-  /* margin: 15px; БЫЛО До ВЕБИНАРА */
-  outline: 1px solid blue; /* До ВЕБИНАРА И ПОСЛЕ ТО ЖЕ*/
 }
 
-/* ДО  Вебинара */
 .portfolio-card-box {
   background: var(--primary-bg-color);
   border-left: 1px solid var(--cards-portfolio-color);
