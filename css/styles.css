@@ -24,6 +24,8 @@ Studio (футтер)-    #FFFFFF
 font-family: Raleway    700;
 
 font-family: Roboto     900, 700, 500, 400;
+Hover Button-Hero   background: #188CE8; !!!!!!!!
+No-Hover Button-Hero  background: #2196F3; !!!!!!!!
 */
 :root {
   --primary-text-color: #757575;
@@ -39,6 +41,57 @@ font-family: Roboto     900, 700, 500, 400;
   --footer-logo-studio-color: #ffffff;
   --header-logo-web-color: #2196f3;
   --footer-bg-color: #2f303a;
+  --button-hover-hero-bg-color: #188ce8;
+  --bottom-line-menu: #ececec;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; /*border-box а глобально на html св-во присвоить БОРДЕр-БОкс, тогда сдесь отсавить инхерит*/
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+
+  /* Совет доп вебинар 1 Репета */
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* size of my container 1200 px =1700 + pading (15 + 15) */
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+
+  /* +++++++++++++++ temporary style +++++++++++++++ */
+  outline: 1px dotted red;
 }
 
 .global {
@@ -64,6 +117,17 @@ font-family: Roboto     900, 700, 500, 400;
 }
 
 /* ========= Header ========= */
+/* add bottom-line */
+
+.header {
+  border-bottom: 1px solid var(--bottom-line-menu);
+}
+
+/* turn components into flex elements */
+.header .container {
+  display: flex;
+  align-items: center;
+}
 
 /* ========= Logo ========= */
 
@@ -74,6 +138,7 @@ font-family: Roboto     900, 700, 500, 400;
   line-height: 1.192;
   letter-spacing: 0.03em;
   text-decoration: none;
+  margin-right: 93px;
 }
 
 .logo-web-color-header {
@@ -84,9 +149,37 @@ font-family: Roboto     900, 700, 500, 400;
   color: var(--header-logo-studio-color);
 }
 
-/* ========= Navigation ========= */
+/* ========= Navigation height 80px ========= */
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+
+  /* +++++++++++++++ temporary style +++++++++++++++ */
+  outline: 1px dotted red;
+}
+
+.site-nav-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.site-nav li {
+  /* +++++++++++++++ temporary style +++++++++++++++ */
+
+  /* +++++++++++++++ temporary style +++++++++++++++ */
+  outline: 1px dotted red;
+}
 
 .site-nav .link {
+  display: inline-block; /* было block */
+
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.143;
@@ -101,6 +194,18 @@ font-family: Roboto     900, 700, 500, 400;
 .site-nav .link:hover,
 .site-nav .link:focus {
   color: var(--accent-color);
+}
+
+.header-contact {
+  display: flex;
+  margin-left: auto;
+
+  /* +++++++++++++++ temporary style +++++++++++++++ */
+  outline: 1px dotted red;
+}
+
+.header-contact .items + .items {
+  margin-left: 50px;
 }
 
 .header-contact-tel,
@@ -119,36 +224,80 @@ font-family: Roboto     900, 700, 500, 400;
   color: var(--accent-color);
 }
 
-/* ========= Hero ========= */
-
+/* ========= Hero</br> ========= */
+/* способ 2 Выравнивание кнопки по центру Героя 
+  .display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
 /* Временное задание фона */
 .hero {
   background-color: var(--footer-bg-color);
+  padding-top: 200px;
+  padding-bottom: 200px;
+
+  text-align: center;
 }
 
 .hero-title {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.364;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--footer-text-color);
+
+  margin-bottom: 30px;
+
+  max-width: 696px;
+
+  margin-left: auto;
+  margin-right: auto;
 }
 
+/* Decoration Button */
+
+/* Hover   background: #188CE8; !!!!!!!!
+No-Hover  background: #2196F3; !!!!!!!!
+136*30 Text Ground
+Button padding 10-32 3.12
+*/
+
 .hero-button {
-  font-family: inherit;
+  padding: 10px 32px;
+
+  font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
-  display: flex;
-  align-items: center;
-  text-align: center;
   letter-spacing: 0.06em;
   color: var(--footer-text-color);
+
   background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  border: none;
+}
+
+.hero-button:hover,
+.hero-button:focus {
+  background-color: var(--button-hover-hero-bg-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* ======= Particularities ======= */
+
+.particular .container {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.particular-list {
+  display: flex;
+}
 
 .particular-list .title {
   font-weight: 700;
@@ -164,9 +313,32 @@ font-family: Roboto     900, 700, 500, 400;
   font-size: 14px;
   line-height: 1.714;
   letter-spacing: 0.03em;
+  min-height: 75px;
 }
 
-/* ======= Practice ======= */
+.particular-list-items {
+  width: 270px;
+}
+
+.particular-list-items:not(:last-child) {
+  margin-right: 30px;
+}
+
+.particular-list-items .title {
+  padding-bottom: 10px;
+}
+
+/* ======= Practice ======= 
+What we are doing, and what we can.
+*/
+.practice .container {
+  padding-bottom: 94px;
+}
+
+.practice-list {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .practice-title {
   font-weight: 700;
@@ -175,15 +347,52 @@ font-family: Roboto     900, 700, 500, 400;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--second-text-color);
+  margin-bottom: 50px;
+}
+
+/* .practice-list-items:not(:last-child) {
+  margin-right: 30px;
+} */
+
+/* каждому добавленные margin-right: 30px и margin-bottom: 30px;. Такой алгоритм не нарушает дизайн фона. */
+.practice-list-items:nth-child(n) {
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+/* каждому 3-му убирает добавленные выше margin-right: 30px.*/
+
+.practice-list-items:nth-child(3n) {
+  margin-right: 0;
+}
+
+/* последним 3м убирает добавленные выше margin-bottom: 30px; что не нарушает заданные дизайном нижний отступ карточек от границы секции.*/
+
+.practice-list-items:nth-last-child(-n + 3) {
+  margin-bottom: 0;
 }
 
 /* ======= Our team ======= */
 .team {
   background-color: var(--second-bg-color);
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  /* margin-left: auto;
+  margin-right: auto; */
 }
 
 .team-list .team-card {
   background-color: var(--primary-bg-color);
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team-title {
@@ -193,7 +402,31 @@ font-family: Roboto     900, 700, 500, 400;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--second-text-color);
+  margin-bottom: 50px;
 }
+
+.team-member-box {
+  padding-right: 32px;
+  padding-left: 32px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+/* каждому добавляет margin-right: 30px */
+.team-card:nth-child(n) {
+  margin-right: 30px;
+  /* margin-bottom: 30px; */
+}
+/* каждому 4-му убирает добавленные выше margin-right: 30px. Такой алгоритм не нарушает дизайн фона, а на секции здесь он есть. */
+.team-card:nth-child(4n) {
+  margin-right: 0;
+}
+
+/* последним 4м убирает добавленные выше margin-bottom: 30px; что не нарушает заданные дизайном нижний отступ карточек от границы секции.*/
+
+/* .team-card:nth-last-child(-n + 4) {
+  margin-bottom: 0;
+} */
 
 .team-list-title {
   font-weight: 500;
@@ -201,6 +434,8 @@ font-family: Roboto     900, 700, 500, 400;
   line-height: 1.188;
   letter-spacing: 0.03em;
   color: var(--second-text-color);
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .team-list-text {
@@ -208,9 +443,19 @@ font-family: Roboto     900, 700, 500, 400;
   font-size: 16px;
   line-height: 1.188;
   letter-spacing: 0.03em;
+  text-align: center;
 }
 
-/* ======= Footer ======= */
+/* ======= Footer .container  ======= */
+
+.footer .container {
+  padding-top: 56px; /* 21*3-24*3=3*3=9. 60+60-(56+55)=9. 9=5+4 раскидал на верхний и нижний паддинг. Из-за ошибки дизайнера Костыль 2 - уменьшить паддинги с 60*/
+  padding-bottom: 55px; /*  Из-за ошибки дизайнера Костыль 2 - уменьшить паддинги с 60*/
+}
+
+.footer-logo {
+  margin-bottom: 20px;
+}
 
 .footer {
   background-color: var(--footer-bg-color);
@@ -223,6 +468,18 @@ font-family: Roboto     900, 700, 500, 400;
 
 .logo-studio-color-footer {
   color: var(--footer-logo-studio-color);
+}
+
+/* kill defolt property */
+
+.address-list {
+  display: flex;
+  flex-direction: column;
+  /* height: 81px; Вариант1. Костыль для исправления ошибки дизайнера макета*/
+}
+
+.address-list .items:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 .address-futer {
@@ -251,29 +508,120 @@ font-family: Roboto     900, 700, 500, 400;
 
 /* ======= CSS rules for Portfolio.html ======= */
 
-/* ======= Filtres buttom ======= */
+/* +++++++++++++++ temporary style +++++++++++++++ */
+.filter {
+  outline: 1px solid green;
+}
+
+.portfolio-main .container {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+/* ======= Filtres button ======= .container*/
+
+.filter-button-container {
+  padding-bottom: 50px;
+}
+
+.filter-list {
+  display: flex;
+  justify-content: center;
+
+  padding-left: 280px;
+  padding-right: 280px;
+}
+
+.filter-list-item:not(:last-child) {
+  margin-right: 8px;
+}
 
 .filter-button {
+  padding-left: 22px;
+  padding-right: 22px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.625;
-  text-align: center;
+  text-align: center; /* проверить на переполнении если что дисп флекс и  и как у кнп в херо*/
   letter-spacing: 0.03em;
   color: var(--second-text-color);
   background-color: var(--navigation-bg-color);
+
+  border: none;
+  border-radius: 4px;
 }
 
 .filter-button:hover,
 .filter-button:focus {
   color: var(--footer-text-color);
   background-color: var(--accent-color);
+
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 
 /* ======= Portfolio ======= */
+
+/* +++++++++++++++ temporary style +++++++++++++++ */
+.portfolio {
+  outline: 1px dotted red;
+}
+
+/* прием для борьбы с выпадением верхнего "-" марджина в секцию с фильтр-кнопками */
+.portfolio-cards {
+  /* padding-top: 1px; */
+  border-top: 0.1px solid transparent;
+  border-bottom: 0.1px solid transparent;
+}
+
 .portfolio-link {
   text-decoration: inherit;
+
+  /* доп. вебинар 1 Репета 1:21  */
+  display: block;
 }
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  /* может быть добавить только левый м правый, а в карточках счетчиком снять верхний у верхнего ряда и нижний у нижнего */
+  margin: -15px;
+}
+
+/* .one-px {
+  height: 1px;
+} */
+
+/* #filter::before {
+    content: "";
+    overflow: hidden; 
+    display: block;
+) */
+
+/* portfolio list develop desing  */
+
+.portfolio-list-item {
+  margin: 15px;
+}
+
+.portfolio-card-box {
+  background: var(--primary-bg-color);
+  border-left: 1px solid var(--cards-portfolio-color);
+  border-bottom: 1px solid var(--cards-portfolio-color);
+  border-right: 1px solid var(--cards-portfolio-color);
+
+  box-sizing: border-box;
+  padding-right: 24;
+  padding-bottom: 20px;
+  padding-left: 24;
+}
+
+/* portfolio list develop desing */
 
 .portfolio-list-item .title {
   font-weight: 700;
@@ -281,6 +629,8 @@ font-family: Roboto     900, 700, 500, 400;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--second-text-color);
+  /* display: block; */
+  margin-bottom: 4px;
 }
 
 .portfolio-list-item .text {
@@ -289,4 +639,5 @@ font-family: Roboto     900, 700, 500, 400;
   line-height: 1.875;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
+  /* display: block; */
 }
