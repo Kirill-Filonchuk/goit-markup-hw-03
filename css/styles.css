@@ -30,16 +30,12 @@ No-Hover Button-Hero  background: #2196F3; !!!!!!!!
 :root {
   --primary-text-color: #757575;
   --second-text-color: #212121;
-  --footer-text-color: #ffffff;
   --accent-color: #2196f3;
   --footer-rare-text-color: rgba(255, 255, 255, 0.6);
   --primary-bg-color: #ffffff;
   --second-bg-color: #f5f4fa;
   --cards-portfolio-color: #eeeeee;
-  --navigation-bg-color: #ffffff;
   --header-logo-studio-color: #000000;
-  --footer-logo-studio-color: #ffffff;
-  --header-logo-web-color: #2196f3;
   --footer-bg-color: #2f303a;
   --button-hover-hero-bg-color: #188ce8;
   --bottom-line-menu: #ececec;
@@ -87,8 +83,7 @@ button {
 /* size of my container 1200 px =1700 + pading (15 + 15) */
 .container {
   width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0 15px;
   margin: 0 auto;
 }
 
@@ -135,10 +130,8 @@ button {
   letter-spacing: 0.03em;
   text-decoration: none;
   margin-right: 93px;
-}
 
-.logo-web-color-header {
-  color: var(--header-logo-web-color);
+  color: var(--accent-color);
 }
 
 .logo-studio-color-header {
@@ -197,6 +190,9 @@ button {
   line-height: 1.143;
   color: var(--primary-text-color);
   text-decoration: none;
+
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .header-contact-tel:hover,
@@ -223,7 +219,7 @@ button {
   line-height: 1.364;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--footer-text-color);
+  color: var(--primary-bg-color);
 
   margin-bottom: 30px;
 
@@ -242,7 +238,7 @@ button {
   font-size: 16px;
   line-height: 1.875;
   letter-spacing: 0.06em;
-  color: var(--footer-text-color);
+  color: var(--primary-bg-color);
 
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -262,7 +258,7 @@ button {
 
 /* ======= Particularities ======= */
 
-.particular .container {
+.particular {
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -301,7 +297,7 @@ button {
 }
 
 /* ======= Practice ======= */
-.practice .container {
+.practice {
   padding-bottom: 94px;
 }
 
@@ -416,7 +412,7 @@ button {
 
 /* ======= Footer .container  ======= */
 
-.footer .container {
+.footer {
   padding-top: 56px; /* 21*3-24*3=3*3=9. 60+60-(56+55)=9. 9=5+4 раскидал на верхний и нижний паддинг. Из-за ошибки дизайнера Костыль 1 - уменьшить паддинги с 60*/
   padding-bottom: 55px; /*  Из-за ошибки дизайнера Костыль 1 - уменьшить паддинги с 60*/
 }
@@ -430,12 +426,8 @@ button {
   font-style: normal;
 }
 
-.logo-web-color-footer {
-  color: var(--header-logo-web-color);
-}
-
 .logo-studio-color-footer {
-  color: var(--footer-logo-studio-color);
+  color: var(--primary-bg-color);
 }
 
 .address-list {
@@ -458,7 +450,7 @@ button {
   font-size: 14px;
   line-height: 1.714;
   letter-spacing: 0.03em;
-  color: var(--footer-text-color);
+  color: var(--primary-bg-color);
   text-decoration: inherit;
 }
 
@@ -474,7 +466,7 @@ button {
 
 /* ======= CSS rules for Portfolio.html ======= */
 
-.portfolio-main .container {
+.portfolio-main {
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -510,7 +502,7 @@ button {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--second-text-color);
-  background-color: var(--navigation-bg-color);
+  background-color: var(--primary-bg-color);
 
   border: none;
   border-radius: 4px;
@@ -518,7 +510,7 @@ button {
 
 .filter-button:hover,
 .filter-button:focus {
-  color: var(--footer-text-color);
+  color: var(--primary-bg-color);
   background-color: var(--accent-color);
 
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
