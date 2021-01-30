@@ -154,7 +154,7 @@ button {
 }
 
 .site-nav .link {
-  display: inline-block;
+  display: block;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -274,6 +274,8 @@ button {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--second-text-color);
+
+  margin-bottom: 10px;
 }
 
 .particular-list .text {
@@ -473,16 +475,14 @@ button {
 
 /* ======= Filtres button ======= */
 
-.filter-button-container {
-  padding-bottom: 50px;
-}
-
 .filter-list {
   display: flex;
   justify-content: center;
 
-  padding-left: 280px;
-  padding-right: 280px;
+  padding-left: 279px;
+  padding-right: 279px;
+
+  margin-bottom: 50px;
 }
 
 .filter-list-item:not(:last-child) {
@@ -502,7 +502,7 @@ button {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--second-text-color);
-  background-color: var(--primary-bg-color);
+  background-color: var(--second-bg-color);
 
   border: none;
   border-radius: 4px;
